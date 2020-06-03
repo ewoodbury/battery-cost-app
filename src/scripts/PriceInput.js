@@ -2,7 +2,7 @@ import React from "react";
 
 function PriceInput() {
   return (
-    <div>
+    <div id="price-input">
       <h3>Price Input</h3>
       <form>
         <label>

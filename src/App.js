@@ -1,20 +1,26 @@
 import React from "react";
-import Input from "./scripts/Input.js";
+import "./App.css";
+import CellInput from "./scripts/CellInput.js";
+import PriceInput from "./scripts/PriceInput.js";
 import Dashboard from "./scripts/Dashboard.js";
-import PieResult from "./scripts/PieResult.js";
-import BarResult from "./scripts/BarResult.js";
+import PieChart from "./scripts/PieChart.js";
+import BarChart from "./scripts/BarChart.js";
 
 function App() {
   return (
     <div>
-      <h1>BatteryCost.app</h1>
-      <p>An application for modeling the cost of lithium-ion batteries.</p>
-      <p>by Ethan Woodbury</p>
-
-      <Input />
-      <Dashboard />
-      <PieResult />
-      <BarResult />
+      <div id="header">
+        <h1>BatteryCost.app</h1>
+        <p>An application for modeling the cost of lithium-ion batteries.</p>
+        <p>by Ethan Woodbury</p>
+      </div>
+      <div className="content">
+        <CellInput />
+        <PriceInput />
+        <Dashboard />
+        <PieChart />
+        <BarChart />
+      </div>
     </div>
   );
 }
