@@ -2,8 +2,8 @@ import React from "react";
 
 function PriceInput() {
   return (
-    <div id="price-input">
-      <h3>Price Input</h3>
+    <div id="price-input" className="container">
+      <h3 className="card-header">Prices</h3>
       <form>
         <label>
           Cathode Active Material ($/kg)

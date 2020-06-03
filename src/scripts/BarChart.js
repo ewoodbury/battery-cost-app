@@ -17,8 +17,8 @@ function BarChart() {
     ],
   };
   return (
-    <div id="bar-section">
-      <h3>Compare Results</h3>
+    <div id="bar-section" className="container">
+      <h3 className="card-header">Compare Results</h3>
       <div id="bar-chart">
         <Bar
           data={data1}

@@ -2,8 +2,8 @@ import React from "react";
 
 function CellInput() {
   return (
-    <div id="cell-input">
-      <h3>Cell Input</h3>
+    <div id="cell-input" className="container">
+      <h3 className="card-header">Cell</h3>
       <form>
         <label>
           Cathode Specific Capacity

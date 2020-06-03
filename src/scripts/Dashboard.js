@@ -2,8 +2,8 @@ import React from "react";
 
 function Dashboard() {
   return (
-    <div id="dashboard">
-      <h3>Statistics</h3>
+    <div id="dashboard" className="container">
+      <h3 className="card-header">Statistics</h3>
       <p>
         <b>Cell Cost:</b> $100/kWh
       </p>
