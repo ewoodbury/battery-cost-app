@@ -3,7 +3,7 @@ import React from "react";
 function Dashboard() {
   return (
     <div id="dashboard">
-      <h3>Dashboard</h3>
+      <h3>Statistics</h3>
       <p>
         <b>Cell Cost:</b> $100/kWh
       </p>

@@ -12,7 +12,6 @@ function App() {
       <div id="header">
         <h1>BatteryCost.app</h1>
         <p>An application for modeling the cost of lithium-ion batteries.</p>
-        <p>by Ethan Woodbury</p>
       </div>
       <div className="content">
         <CellInput />

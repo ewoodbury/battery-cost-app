@@ -17,15 +17,17 @@ function PieChart() {
     ],
   };
   return (
-    <div id="pie-chart">
+    <div id="pie-section">
       <h3>View Result</h3>
-      <p>Pie chart here</p>
-      <Pie
-        data={data1}
-        options={{ maintainAspectRatio: false }}
-        // height={10}
-        width={10}
-      />
+      <div id="pie-chart">
+        <Pie
+          data={data1}
+          options={{
+            responsive: true,
+            maintainAspectRatio: false,
+          }}
+        />
+      </div>
     </div>
   );
 }

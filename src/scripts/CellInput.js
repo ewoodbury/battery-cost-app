@@ -34,7 +34,7 @@ function CellInput() {
         </label>
         <br />
       </form>
-      <p>
+      {/* <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur
         inventore commodi fuga ex voluptate nemo harum labore? Ullam
         necessitatibus officia nulla quas laudantium laborum? Quis vero tempore
@@ -49,7 +49,7 @@ function CellInput() {
         commodi fuga ex voluptate nemo harum labore? Ullam necessitatibus
         officia nulla quas laudantium laborum? Quis vero tempore aut quia
         consequatur.
-      </p>
+      </p> */}
     </div>
   );
 }

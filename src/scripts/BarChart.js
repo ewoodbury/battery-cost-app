@@ -17,10 +17,17 @@ function BarChart() {
     ],
   };
   return (
-    <div id="bar-chart">
+    <div id="bar-section">
       <h3>Compare Results</h3>
-      <p>Bar chart here</p>
-      <Bar data={data1} options={{ maintainAspectRatio: false }} width={10} />
+      <div id="bar-chart">
+        <Bar
+          data={data1}
+          options={{
+            responsive: true,
+            maintainAspectRatio: false,
+          }}
+        />
+      </div>
     </div>
   );
 }
