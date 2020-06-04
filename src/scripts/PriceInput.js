@@ -4,6 +4,7 @@ function PriceInput() {
   return (
     <div id="price-input" className="container">
       <h3 className="card-header">Prices</h3>
+      <p className="card-description">Enter prices:</p>
       <form>
         <label>
           Cathode Active Material ($/kg)

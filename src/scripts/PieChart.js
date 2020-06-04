@@ -18,7 +18,7 @@ function PieChart() {
   };
   return (
     <div id="pie-section" className="container">
-      <h3 className="card-header">View Result</h3>
+      <h3 className="card-header">Cost Breakdown</h3>
       <div id="pie-chart">
         <Pie
           data={data1}
