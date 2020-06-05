@@ -17,9 +17,6 @@ function App() {
           <p>An app for modeling the cost of lithium-ion batteries</p>
         </div>
       </div>
-      {/* <div id="intro">
-        <p>An application for modeling the cost of lithium-ion batteries</p>
-      </div> */}
       <div className="content">
         <CellInput />
         <PriceInput />
