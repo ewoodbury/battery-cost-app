@@ -4,16 +4,19 @@ function Slider(props) {
   return (
     <label>
       <span>{props.label} </span>
-      <span className="slider-unit">- mAh/g</span>
+      <span className="slider-unit">
+        {props.unit ? <span> - {props.unit}</span> : ""}
+      </span>
       <div className="slider-section">
         <input
-          id={props.id}
+          name={props.name}
           className="slider"
           type="range"
           value={props.value}
           min={props.min}
           max={props.max}
-          onChange={props.handleChange(props.id)}
+          step={props.step}
+          onChange={props.handleChange(props.name)}
         />
         <input
           className="slider-value"
@@ -21,7 +24,8 @@ function Slider(props) {
           value={props.value}
           min={props.min}
           max={props.max}
-          onChange={props.handleChange(props.id)}
+          step={props.step}
+          onChange={props.handleChange(props.name)}
         />
       </div>
     </label>
