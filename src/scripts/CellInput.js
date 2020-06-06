@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Slider from "./Slider";
-import cellParameters from "../data/cellParameters.js";
+// import cellParameters from "../data/cellParameters.js";
 
-function CellInput() {
-  const [myState, setMyState] = useState({ params: cellParameters });
+function CellInput(props) {
+  const [myState, setMyState] = useState({ params: props.cellData });
 
   function handleChange(name) {
     return (event) => {
@@ -14,6 +14,7 @@ function CellInput() {
         return param;
       });
       setMyState({ params: updatedCellParameters });
+      props.getCellData(myState.params);
     };
   }
 

@@ -31,8 +31,8 @@ const cellParameters = [
     label: "Cathode Active Fraction",
     unit: "",
     value: 0.98,
-    min: 0,
-    max: 400,
+    min: 0.9,
+    max: 1,
     step: 0.01,
   },
 ];

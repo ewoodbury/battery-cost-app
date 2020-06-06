@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import CellInput from "./scripts/CellInput.js";
 import PriceInput from "./scripts/PriceInput.js";
 import Statistics from "./scripts/Statistics.js";
 import PieChart from "./scripts/PieChart.js";
 import BarChart from "./scripts/BarChart.js";
+import cellParameters from "./data/cellParameters.js";
 
 function App() {
+  const [myState, setMyState] = useState({
+    cellParams: cellParameters,
+    // priceParams: 0,
+  });
+
+  function getCellData(data) {
+    return setMyState({ cellParams: data });
+  }
   return (
     <div>
       <div id="header">
@@ -18,10 +27,10 @@ function App() {
         </div>
       </div>
       <div className="content">
-        <CellInput />
+        <CellInput cellData={myState.cellParams} getCellData={getCellData} />
         <PriceInput />
-        <Statistics />
-        <PieChart />
+        <Statistics cellData={myState.cellParams} />
+        <PieChart cellData={myState.cellParams} />
         <BarChart />
       </div>
     </div>
