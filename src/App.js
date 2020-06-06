@@ -20,7 +20,7 @@ function App() {
     <div>
       <div id="header">
         <div id="title">
-          <h1>BatteryCost.app</h1>
+          <h1>BatteryCost.me</h1>
         </div>
         <div id="intro">
           <p>An app for modeling the cost of lithium-ion batteries</p>
