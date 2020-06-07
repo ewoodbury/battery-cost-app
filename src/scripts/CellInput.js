@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Slider from "./Slider";
-// import cellParameters from "../data/cellParameters.js";
 
 function CellInput(props) {
   const [myState, setMyState] = useState({ params: props.cellData });

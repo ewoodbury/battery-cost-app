@@ -10,7 +10,6 @@ import cellParameters from "./data/cellParameters.js";
 function App() {
   const [myState, setMyState] = useState({
     cellParams: cellParameters,
-    // priceParams: 0,
   });
 
   function getCellData(data) {
