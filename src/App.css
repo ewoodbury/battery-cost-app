@@ -34,6 +34,11 @@ h3 {
   display: flex;
   align-items: baseline; /*Makes text line in adjacent boxes line up*/
 }
+/* @media (max-width: 1000px) {
+  #header {
+    display: inline;
+  }
+} */
 
 #title {
   color: #fff;
@@ -69,6 +74,16 @@ h3 {
 .content {
   grid-gap: 5px;
   margin: 0 12px;
+}
+
+/*Adjust padding and margins on mobile:*/
+@media (max-width: 650px) {
+  .container {
+    padding: 8px;
+  }
+  .content {
+    margin: 0;
+  }
 }
 
 /* Start CSS Grid Section */
@@ -204,36 +219,73 @@ h3 {
 /*End CSS Grid Section
 
 /*Start Statistics Section*/
+/*Small screen Stats box*/
 #statistics {
-  display: flex;
+  display: inline;
 }
 
 #statistics-header {
-  flex-grow: 0.12;
+  padding-bottom: 8px;
 }
 #statistics-container {
   display: flex;
   flex-grow: 1;
+  padding: 0px;
 }
 
 .stat-number {
   color: var(--theme-blue);
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 700;
 }
 .stat-unit {
   color: var(--light-gray);
-  font-size: 14px;
-  margin: 7px;
+  font-size: 13px;
+  margin: 5px;
 }
 .stat-caption {
   color: var(--light-gray);
-  font-size: 19px;
+  font-size: 16px;
 }
 
 .stat-item {
   flex-grow: 1;
   text-align: center;
+}
+
+/*Med and large screen stats box*/
+@media (min-width: 1000px) {
+  #statistics {
+    display: flex;
+  }
+
+  #statistics-header {
+    flex-grow: 0.12;
+  }
+  #statistics-container {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .stat-number {
+    color: var(--theme-blue);
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .stat-unit {
+    color: var(--light-gray);
+    font-size: 14px;
+    margin: 7px;
+  }
+  .stat-caption {
+    color: var(--light-gray);
+    font-size: 19px;
+  }
+
+  .stat-item {
+    flex-grow: 1;
+    text-align: center;
+  }
 }
 /*End Statistics Section*/
 

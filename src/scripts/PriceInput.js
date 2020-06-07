@@ -59,7 +59,7 @@ function PriceInput() {
           unit=""
         />
       </form>
-      <p>
+      {/* <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
         eleifend ornare dui, sed semper enim euismod a. Curabitur eget dapibus
         ex. Sed commodo, nibh quis tempus accumsan, mauris dui rutrum odio, eget
@@ -78,7 +78,7 @@ function PriceInput() {
         quam elementum iaculis. Vestibulum ante ipsum primis in faucibus orci
         luctus et ultrices posuere cubilia curae; Nulla sagittis a tortor sed
         vehicula. Vestibulum velit elit, rutrum vitae ullamcorper quis,
-      </p>
+      </p> */}
     </div>
   );
 }
