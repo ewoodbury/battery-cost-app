@@ -306,8 +306,8 @@ h3 {
     height: calc(55vh - 100px);
   }
 }
-
-/*Start Chart Formatting*/
+/*End graph sizing*/
+/*Start Graph Formatting*/
 #pie-chart {
   height: 90%;
   padding: 5px;
@@ -321,7 +321,7 @@ h3 {
   margin: 5px;
   box-sizing: border-box;
 }
-/*End Chart Formatting*/
+/*End Graph Formatting*/
 
 /*Start Slider Section*/
 .slider-section {
