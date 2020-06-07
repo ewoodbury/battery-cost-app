@@ -57,6 +57,11 @@ h3 {
     font-size: 14px;
   }
 }
+@media (max-width: 370px) {
+  #intro {
+    font-size: 11.5px;
+  }
+}
 
 .container {
   background-color: #fff;
@@ -159,7 +164,7 @@ h3 {
 }
 
 /*Medium width section*/
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
   .content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -224,46 +229,58 @@ h3 {
 /*End CSS Grid Section
 
 /*Start Statistics Section*/
-/*Small screen Stats box*/
+/*Default values and tiny screen*/
 #statistics {
   display: inline;
 }
-
 #statistics-header {
-  padding-bottom: 8px;
+  padding-bottom: 3px;
 }
 #statistics-container {
   display: flex;
   flex-grow: 1;
   padding: 0px;
 }
-
 .stat-number {
   color: var(--theme-blue);
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 700;
 }
 .stat-unit {
   color: var(--light-gray);
-  font-size: 13px;
-  margin: 5px;
+  font-size: 11px;
+  margin: 3px;
 }
 .stat-caption {
   color: var(--light-gray);
-  font-size: 16px;
+  font-size: 13px;
 }
-
 .stat-item {
   flex-grow: 1;
   text-align: center;
 }
 
+/*Small screen Stats box*/
+/*Only adjusting sizing*/
+@media (min-width: 400px) {
+  .stat-number {
+    font-size: 25px;
+  }
+  .stat-unit {
+    color: var(--light-gray);
+    font-size: 13px;
+    margin: 5px;
+  }
+  .stat-caption {
+    font-size: 16px;
+  }
+}
+
 /*Med and large screen stats box*/
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
   #statistics {
     display: flex;
   }
-
   #statistics-header {
     flex-grow: 0.12;
   }
@@ -271,22 +288,17 @@ h3 {
     display: flex;
     flex-grow: 1;
   }
-
   .stat-number {
-    color: var(--theme-blue);
     font-size: 30px;
     font-weight: 700;
   }
   .stat-unit {
-    color: var(--light-gray);
     font-size: 14px;
     margin: 7px;
   }
   .stat-caption {
-    color: var(--light-gray);
     font-size: 19px;
   }
-
   .stat-item {
     flex-grow: 1;
     text-align: center;
@@ -300,7 +312,7 @@ h3 {
   height: calc(80vh - 50px);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   #pie-section,
   #bar-section {
     height: calc(55vh - 100px);
@@ -350,6 +362,14 @@ h3 {
   border: none;
   background: var(--theme-blue);
   cursor: pointer;
+}
+@media (pointer: coarse) {
+  .slider::-moz-range-thumb,
+  .slider::-webkit-slider-thumb,
+  .slider-webkit {
+    width: 22px;
+    height: 22px;
+  }
 }
 .slider::-moz-range-thumb:active {
   box-shadow: 0 0 0 6px #336af771;
