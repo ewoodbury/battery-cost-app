@@ -89,7 +89,7 @@ h3 {
 /* Start CSS Grid Section */
 /*Mobile CSS*/
 .content {
-  background-color: rgb(236, 216, 179);
+  /* background-color: rgb(236, 216, 179); */
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -123,7 +123,7 @@ h3 {
 /*Tablet width section*/
 @media (min-width: 650px) {
   .content {
-    background-color: rgb(245, 146, 146);
+    /* background-color: rgb(245, 146, 146); */
     display: grid;
     grid-template-columns: 2fr 3fr;
   }
@@ -155,7 +155,7 @@ h3 {
 /*Medium width section*/
 @media (min-width: 1000px) {
   .content {
-    background-color: rgb(156, 156, 156);
+    /* background-color: rgb(156, 156, 156); */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
