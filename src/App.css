@@ -23,7 +23,7 @@ h3 {
   grid-column: 1 / 5;
   grid-row: 1;
 
-  padding: 10px 20px;
+  padding: 15px 20px;
   background-color: var(--theme-blue);
   box-shadow: 0 3px 15px -2px rgba(0, 0, 0, 0.25),
     1px 1px 8px 0px rgba(0, 0, 0, 0.25);
@@ -32,13 +32,11 @@ h3 {
   font-family: "Open Sans", sans-serif;
 
   display: flex;
-  align-items: baseline; /*Makes text line in adjacent boxes line up*/
+  align-items: baseline;
 }
-/* @media (max-width: 1000px) {
-  #header {
-    display: inline;
-  }
-} */
+#header p {
+  margin: 5px 0;
+}
 
 #title {
   color: #fff;
@@ -47,7 +45,17 @@ h3 {
   padding: 0px 20px;
   color: #cccccc;
   font-size: 16px;
-  /* vertical-align: center; */
+}
+
+@media (max-width: 700px) {
+  #header {
+    display: block;
+    padding: 10px 10px;
+  }
+  #intro {
+    padding: 0px 4px;
+    font-size: 14px;
+  }
 }
 
 .container {
@@ -89,7 +97,6 @@ h3 {
 /* Start CSS Grid Section */
 /*Mobile CSS*/
 .content {
-  /* background-color: rgb(236, 216, 179); */
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -123,7 +130,6 @@ h3 {
 /*Tablet width section*/
 @media (min-width: 650px) {
   .content {
-    /* background-color: rgb(245, 146, 146); */
     display: grid;
     grid-template-columns: 2fr 3fr;
   }
@@ -148,14 +154,13 @@ h3 {
   }
   #bar-section {
     grid-column: 2 / 4;
-    grid-row: 4;
+    grid-row: 4 / 6;
   }
 }
 
 /*Medium width section*/
 @media (min-width: 1000px) {
   .content {
-    /* background-color: rgb(156, 156, 156); */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -177,11 +182,11 @@ h3 {
   }
   #pie-section {
     grid-column: 2;
-    grid-row: 2 / 4;
+    grid-row: 2 / 5;
   }
   #bar-section {
     grid-column: 3;
-    grid-row: 2 / 4;
+    grid-row: 2 / 5;
   }
 }
 
@@ -195,12 +200,12 @@ h3 {
 
   #cell-input {
     grid-column: 1;
-    grid-row: 1 / 4;
+    grid-row: 1 / 3;
   }
 
   #price-input {
     grid-column: 2;
-    grid-row: 1 / 4;
+    grid-row: 1 / 3;
   }
 
   #statistics {
@@ -289,22 +294,25 @@ h3 {
 }
 /*End Statistics Section*/
 
-/*Start Pie Section*/
-#pie-section {
-  height: 670px;
+/*Graph sizing*/
+#pie-section,
+#bar-section {
+  height: calc(80vh - 50px);
 }
 
+@media (max-width: 1000px) {
+  #pie-section,
+  #bar-section {
+    height: calc(55vh - 100px);
+  }
+}
+
+/*Start Chart Formatting*/
 #pie-chart {
   height: 90%;
   padding: 5px;
   margin: 5px;
   box-sizing: border-box;
-}
-/*End Pie Section*/
-
-/*Start Bar Section*/
-#bar-section {
-  height: 670px;
 }
 
 #bar-chart {
@@ -313,7 +321,7 @@ h3 {
   margin: 5px;
   box-sizing: border-box;
 }
-/*End Bar Section*/
+/*End Chart Formatting*/
 
 /*Start Slider Section*/
 .slider-section {
