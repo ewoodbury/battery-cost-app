@@ -6,15 +6,21 @@ import Statistics from "./scripts/Statistics.js";
 import PieChart from "./scripts/PieChart.js";
 import BarChart from "./scripts/BarChart.js";
 import cellParameters from "./data/cellParameters.js";
+import priceParameters from "./data/priceParameters.js";
 
 function App() {
   const [myState, setMyState] = useState({
     cellParams: cellParameters,
+    priceParams: priceParameters,
   });
 
   function getCellData(data) {
-    return setMyState({ cellParams: data });
+    return setMyState({ ...myState, cellParams: data });
   }
+  function getPriceData(data) {
+    return setMyState({ ...myState, priceParams: data });
+  }
+
   return (
     <div>
       <div id="header">
@@ -27,7 +33,10 @@ function App() {
       </div>
       <div className="content">
         <CellInput cellData={myState.cellParams} getCellData={getCellData} />
-        <PriceInput />
+        <PriceInput
+          priceData={myState.priceParams}
+          getPriceData={getPriceData}
+        />
         <Statistics cellData={myState.cellParams} />
         <PieChart cellData={myState.cellParams} />
         <BarChart />

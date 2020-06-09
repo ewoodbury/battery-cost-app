@@ -6,13 +6,13 @@ function CellInput(props) {
 
   function handleChange(name) {
     return (event) => {
-      const updatedCellParameters = myState.params.map((param) => {
+      const updatedParameters = myState.params.map((param) => {
         if (param.name === name) {
           param.value = event.target.value;
         }
         return param;
       });
-      setMyState({ params: updatedCellParameters });
+      setMyState({ params: updatedParameters });
       props.getCellData(myState.params);
     };
   }

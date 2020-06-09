@@ -367,8 +367,8 @@ h3 {
   .slider::-moz-range-thumb,
   .slider::-webkit-slider-thumb,
   .slider-webkit {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
   }
 }
 .slider::-moz-range-thumb:active {
