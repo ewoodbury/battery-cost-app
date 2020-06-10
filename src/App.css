@@ -2,6 +2,7 @@
   --theme-blue: #3369f7;
   --text-gray: rgb(75, 75, 75);
   --light-gray: #7d7d7d;
+  --slider-gray: #d3d3d3;
 }
 
 body {
@@ -346,7 +347,7 @@ h3 {
   width: 88%;
   margin: 8px 0;
   height: 4px;
-  background: #d3d3d3; /* Grey background */
+  background: #cad9ff; /* Light blue background */
   transition: 0.2s ease all;
 }
 
@@ -372,8 +373,12 @@ h3 {
   }
 }
 .slider::-moz-range-thumb:active {
-  box-shadow: 0 0 0 6px #336af771;
+  box-shadow: 0 0 0 8px #336af771;
 }
+/* .slider::-webkit-slider-thumb:active {
+  box-shadow: 0 0 0 8px #336af771;
+} 
+This looks really bad in Chrome - shadow is a box not round*/
 .slider::-moz-range-progress {
   background-color: var(--theme-blue);
 }
@@ -403,4 +408,42 @@ input::-webkit-inner-spin-button {
 .slider-unit {
   font-size: 13px;
   color: var(--light-gray);
+}
+
+.slider-label-disabled {
+  color: var(--light-gray); /* Grey background */
+  transition: 0.2s ease all;
+}
+
+.slider-disabled::-moz-range-thumb,
+.slider-disabled::-webkit-slider-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: none;
+  background: #a9a9a9;
+  cursor: pointer;
+}
+@media (pointer: coarse) {
+  .slider-disabled::-moz-range-thumb,
+  .slider-disabled::-webkit-slider-thumb,
+  .slider-webkit {
+    width: 18px;
+    height: 18px;
+  }
+}
+.slider-disabled {
+  background-color: var(--slider-gray);
+}
+.slider-disabled::-moz-range-progress {
+  background-color: #a9a9a9;
+}
+.slider-disabled::-ms-fill-lower {
+  background-color: #a9a9a9;
+}
+.slider-disabled::-moz-range-thumb:active {
+  box-shadow: none;
+}
+.slider-value-disabled {
+  color: #a9a9a9;
 }

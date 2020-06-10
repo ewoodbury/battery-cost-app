@@ -7,6 +7,7 @@ const priceParameters = [
     min: 0,
     max: 200,
     step: 1,
+    enabled: true,
   },
   {
     name: "anActiveP",
@@ -16,6 +17,7 @@ const priceParameters = [
     min: 0,
     max: 100,
     step: 1,
+    enabled: true,
   },
   {
     name: "electrolyte",
@@ -25,6 +27,7 @@ const priceParameters = [
     min: 0,
     max: 1,
     step: 0.01,
+    enabled: true,
   },
   {
     name: "can",
@@ -34,6 +37,7 @@ const priceParameters = [
     min: 0,
     max: 1,
     step: 0.01,
+    enabled: true,
   },
   {
     name: "sep",
@@ -43,6 +47,7 @@ const priceParameters = [
     min: 0,
     max: 0.5,
     step: 0.01,
+    enabled: true,
   },
   {
     name: "catBinder",
@@ -52,6 +57,7 @@ const priceParameters = [
     min: 0,
     max: 20,
     step: 1,
+    enabled: true,
   },
   {
     name: "catConductor",
@@ -61,6 +67,7 @@ const priceParameters = [
     min: 0,
     max: 20,
     step: 1,
+    enabled: true,
   },
   {
     name: "anBinder",
@@ -70,6 +77,7 @@ const priceParameters = [
     min: 0,
     max: 20,
     step: 1,
+    enabled: true,
   },
   {
     name: "anConductor",
@@ -79,6 +87,7 @@ const priceParameters = [
     min: 0,
     max: 20,
     step: 1,
+    enabled: true,
   },
   {
     name: "packCosts",
@@ -88,6 +97,7 @@ const priceParameters = [
     min: 0,
     max: 2,
     step: 0.1,
+    enabled: true,
   },
 ];
 

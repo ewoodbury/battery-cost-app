@@ -27,6 +27,7 @@ function CellInput(props) {
       min={param.min}
       max={param.max}
       step={param.step}
+      enabled={param.enabled}
       handleChange={handleChange}
     />
   ));

@@ -7,6 +7,7 @@ const cellParameters = [
     min: 0,
     max: 500,
     step: 1,
+    enabled: true,
   },
   {
     name: "anCap",
@@ -16,6 +17,7 @@ const cellParameters = [
     min: 0,
     max: 2000,
     step: 1,
+    enabled: true,
   },
   {
     name: "avgDisVoltage",
@@ -25,6 +27,7 @@ const cellParameters = [
     min: 3,
     max: 4.2,
     step: 0.05,
+    enabled: true,
   },
   {
     name: "catLoading",
@@ -34,6 +37,7 @@ const cellParameters = [
     min: 0,
     max: 50,
     step: 1,
+    enabled: true,
   },
   {
     name: "anLoading",
@@ -43,6 +47,7 @@ const cellParameters = [
     min: 0,
     max: 50,
     step: 1,
+    enabled: false,
   },
   {
     name: "npRatio",
@@ -52,6 +57,7 @@ const cellParameters = [
     min: 0.9,
     max: 1.1,
     step: 0.01,
+    enabled: true,
   },
   {
     name: "electrodeArea",
@@ -61,6 +67,7 @@ const cellParameters = [
     min: 0,
     max: 1000,
     step: 1,
+    enabled: true,
   },
   {
     name: "catActiveFrac",
@@ -70,6 +77,7 @@ const cellParameters = [
     min: 0.9,
     max: 1,
     step: 0.01,
+    enabled: true,
   },
   {
     name: "anActiveFrac",
@@ -79,6 +87,7 @@ const cellParameters = [
     min: 0.9,
     max: 1,
     step: 0.01,
+    enabled: true,
   },
   {
     name: "alFoilThickness",
@@ -88,6 +97,7 @@ const cellParameters = [
     min: 10,
     max: 30,
     step: 1,
+    enabled: true,
   },
   {
     name: "cuFoilThickness",
@@ -97,6 +107,7 @@ const cellParameters = [
     min: 5,
     max: 20,
     step: 1,
+    enabled: true,
   },
 ];
 
