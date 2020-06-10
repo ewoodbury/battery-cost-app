@@ -37,7 +37,11 @@ function Slider(props) {
           min={props.min}
           max={props.max}
           step={props.step}
-          onChange={props.handleChange(props.name)}
+          onChange={
+            props.enabled
+              ? props.handleChange(props.name)
+              : () => console.log("Slider is disabled")
+          }
         />
       </div>
     </label>
