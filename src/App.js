@@ -12,6 +12,7 @@ function App() {
   const [myState, setMyState] = useState({
     cellParams: cellParameters,
     priceParams: priceParameters,
+    results: {},
   });
 
   function getCellData(data) {
