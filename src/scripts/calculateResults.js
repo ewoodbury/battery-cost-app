@@ -50,6 +50,18 @@ function calculateResults(cellParams, priceParams) {
   let c_sep_kwh = cellsPerKwh * c_sep;
   let c_packCosts_kwh = cellsPerKwh * c_packCosts;
 
+  const c_totalCellLevel =
+    c_catActiveMass_kwh +
+    c_catBinder_kwh +
+    c_catConductor_kwh +
+    c_anBinder_kwh +
+    c_anActiveMass_kwh +
+    c_anConductor_kwh +
+    c_electrolyte_kwh +
+    c_can_kwh +
+    c_sep_kwh;
+  const c_totalPackLevel = c_totalCellLevel + c_packCosts_kwh;
+
   let results = {
     catActiveMass: c_catActiveMass_kwh,
     catBinder: c_catBinder_kwh,
@@ -61,6 +73,9 @@ function calculateResults(cellParams, priceParams) {
     can: c_can_kwh,
     sep: c_sep_kwh,
     packCosts: c_packCosts_kwh,
+    totalCellLevelCost: c_totalCellLevel.toFixed(2),
+    totalPackLevelCost: c_totalPackLevel.toFixed(2),
+    cellEnergy: cellEnergy.toFixed(1),
   };
   return results;
 }

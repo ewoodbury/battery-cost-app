@@ -89,26 +89,6 @@ const cellParameters = [
     step: 0.01,
     enabled: true,
   },
-  {
-    name: "alFoilThickness",
-    label: "Aluminum Foil Thickness",
-    unit: "microns",
-    value: 20,
-    min: 10,
-    max: 30,
-    step: 1,
-    enabled: true,
-  },
-  {
-    name: "cuFoilThickness",
-    label: "Copper Foil Thickness",
-    unit: "microns",
-    value: 10,
-    min: 5,
-    max: 20,
-    step: 1,
-    enabled: true,
-  },
 ];
 
 export default cellParameters;
