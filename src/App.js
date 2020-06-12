@@ -7,6 +7,7 @@ import PieChart from "./scripts/PieChart.js";
 import BarChart from "./scripts/BarChart.js";
 import cellParameters from "./data/cellParameters.js";
 import priceParameters from "./data/priceParameters.js";
+import calculateResults from "./scripts/calculateResults.js";
 
 function App() {
   const [myState, setMyState] = useState({
@@ -21,6 +22,8 @@ function App() {
   function getPriceData(data) {
     return setMyState({ ...myState, priceParams: data });
   }
+
+  let results = calculateResults(myState.cellParams, myState.priceParams);
 
   return (
     <div>
