@@ -32,6 +32,7 @@ function calculateResults(cellParams, priceParams) {
   let c_electrolyte = priceData.electrolyte;
   let c_can = priceData.can;
   let c_sep = priceData.sep;
+  let c_cellManufacturing = priceData.cellManufacturing;
   let c_alFoil = priceData.alFoil;
   let c_cuFoil = priceData.cuFoil;
   let c_packCosts = priceData.packCosts;
@@ -50,6 +51,7 @@ function calculateResults(cellParams, priceParams) {
   let c_electrolyte_kwh = cellsPerKwh * c_electrolyte;
   let c_can_kwh = cellsPerKwh * c_can;
   let c_sep_kwh = cellsPerKwh * c_sep;
+  let c_cellManufacturing_kwh = cellsPerKwh * c_cellManufacturing;
   let c_alFoil_kwh = cellsPerKwh * c_alFoil;
   let c_cuFoil_kwh = cellsPerKwh * c_cuFoil;
   let c_packCosts_kwh = cellsPerKwh * c_packCosts;
@@ -64,6 +66,7 @@ function calculateResults(cellParams, priceParams) {
     c_electrolyte_kwh +
     c_can_kwh +
     c_sep_kwh +
+    c_cellManufacturing_kwh +
     c_alFoil_kwh +
     c_cuFoil_kwh;
   const c_totalPackLevel = c_totalCellLevel + c_packCosts_kwh;
@@ -79,9 +82,10 @@ function calculateResults(cellParams, priceParams) {
       electrolyte: c_electrolyte_kwh.toFixed(2),
       can: c_can_kwh.toFixed(2),
       sep: c_sep_kwh.toFixed(2),
-      packCosts: c_packCosts_kwh.toFixed(2),
+      cellManufacturing: c_cellManufacturing_kwh.toFixed(2),
       alFoil: c_alFoil_kwh.toFixed(2),
       cuFoil: c_cuFoil_kwh.toFixed(2),
+      packCosts: c_packCosts_kwh.toFixed(2),
     },
     statistics: {
       totalCellLevelCost: c_totalCellLevel.toFixed(2),

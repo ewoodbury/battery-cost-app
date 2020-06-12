@@ -24,9 +24,6 @@ function PieChart(props) {
           "#BCAAA4",
         ],
       },
-
-      // { label: "b", data: [7, 8, 9], fill: false, backgroundColor: "#EBCCD1" },
-      // { label: "c", data: [5, 9, 8], fill: false, backgroundColor: "#FAEBCC" },
     ],
   };
   return (
