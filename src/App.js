@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import CellInput from "./scripts/CellInput.js";
 import PriceInput from "./scripts/PriceInput.js";
@@ -23,7 +23,11 @@ function App() {
     return setMyState({ ...myState, priceParams: data });
   }
 
-  let results = calculateResults(myState.cellParams, myState.priceParams);
+  useEffect(() => {
+    console.log("Results updated");
+    let results = calculateResults(myState.cellParams, myState.priceParams);
+    setMyState({ ...myState, results: results });
+  }, [myState.cellParams, myState.priceParams]);
 
   return (
     <div>

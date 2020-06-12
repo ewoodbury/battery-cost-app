@@ -38,7 +38,6 @@ function calculateResults(cellParams, priceParams) {
   //Section 3: Calculate Costs per kWh
   let cellEnergy = (catCellCap / 1000) * cellData.avgDisVoltage; //Wh
   let cellsPerKwh = 1000 / cellEnergy;
-  console.log(cellsPerKwh);
 
   let c_catActiveMass_kwh = cellsPerKwh * c_catActiveMass;
   let c_catBinder_kwh = cellsPerKwh * c_catBinder;
