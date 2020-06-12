@@ -88,8 +88,8 @@ function calculateResults(cellParams, priceParams) {
       packCosts: c_packCosts_kwh.toFixed(2),
     },
     statistics: {
-      totalCellLevelCost: c_totalCellLevel.toFixed(2),
-      totalPackLevelCost: c_totalPackLevel.toFixed(2),
+      totalCellLevelCost: c_totalCellLevel.toFixed(0),
+      totalPackLevelCost: c_totalPackLevel.toFixed(0),
       cellEnergy: cellEnergy.toFixed(1),
     },
   };
