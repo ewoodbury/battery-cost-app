@@ -69,21 +69,25 @@ function calculateResults(cellParams, priceParams) {
   const c_totalPackLevel = c_totalCellLevel + c_packCosts_kwh;
 
   let results = {
-    catActiveMass: c_catActiveMass_kwh,
-    catBinder: c_catBinder_kwh,
-    catConductor: c_catConductor_kwh,
-    anActiveMass: c_anActiveMass_kwh,
-    anBinder: c_anBinder_kwh,
-    anConductor: c_anConductor_kwh,
-    electrolyte: c_electrolyte_kwh,
-    can: c_can_kwh,
-    sep: c_sep_kwh,
-    packCosts: c_packCosts_kwh,
-    alFoil: c_alFoil_kwh,
-    cuFoil: c_cuFoil_kwh,
-    totalCellLevelCost: c_totalCellLevel.toFixed(2),
-    totalPackLevelCost: c_totalPackLevel.toFixed(2),
-    cellEnergy: cellEnergy.toFixed(1),
+    cost: {
+      catActiveMass: c_catActiveMass_kwh.toFixed(2),
+      catBinder: c_catBinder_kwh.toFixed(2),
+      catConductor: c_catConductor_kwh.toFixed(2),
+      anActiveMass: c_anActiveMass_kwh.toFixed(2),
+      anBinder: c_anBinder_kwh.toFixed(2),
+      anConductor: c_anConductor_kwh.toFixed(2),
+      electrolyte: c_electrolyte_kwh.toFixed(2),
+      can: c_can_kwh.toFixed(2),
+      sep: c_sep_kwh.toFixed(2),
+      packCosts: c_packCosts_kwh.toFixed(2),
+      alFoil: c_alFoil_kwh.toFixed(2),
+      cuFoil: c_cuFoil_kwh.toFixed(2),
+    },
+    statistics: {
+      totalCellLevelCost: c_totalCellLevel.toFixed(2),
+      totalPackLevelCost: c_totalPackLevel.toFixed(2),
+      cellEnergy: cellEnergy.toFixed(1),
+    },
   };
   return results;
 }

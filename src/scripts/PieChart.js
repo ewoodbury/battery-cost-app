@@ -3,17 +3,26 @@ import { Pie } from "react-chartjs-2";
 
 function PieChart(props) {
   const data1 = {
-    labels: ["N-P Ratio", "Area", "Capacity"],
+    labels: Object.keys(props.results.cost),
     datasets: [
       {
         label: "a",
-        data: [
-          props.cellData[0].value,
-          props.cellData[1].value,
-          props.cellData[2].value,
-        ],
+        data: Object.values(props.results.cost),
         fill: true,
-        backgroundColor: ["#D6E9C6", "#EBCCD1", "#FAEBCC"], // green
+        backgroundColor: [
+          "#EF9A9A",
+          "#B39DDB",
+          "#9FA8DA",
+          "#81D4FA",
+          "#80CBC4",
+          "#80DEEA",
+          "#C5E1A5",
+          "#E6EE9C",
+          "#FFF59D",
+          "#FFCC80",
+          "#FFAB91",
+          "#BCAAA4",
+        ],
       },
 
       // { label: "b", data: [7, 8, 9], fill: false, backgroundColor: "#EBCCD1" },

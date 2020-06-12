@@ -13,7 +13,10 @@ function App() {
   const [myState, setMyState] = useState({
     cellParams: cellParameters,
     priceParams: priceParameters,
-    results: {},
+    results: {
+      cost: {},
+      statistics: {},
+    },
   });
 
   function getCellData(data) {
@@ -24,7 +27,6 @@ function App() {
   }
 
   useEffect(() => {
-    let n = 5.0555;
     let results = calculateResults(myState.cellParams, myState.priceParams);
     setMyState({ ...myState, results: results });
   }, [myState.cellParams, myState.priceParams]);
@@ -46,7 +48,7 @@ function App() {
           getPriceData={getPriceData}
         />
         <Statistics results={myState.results} />
-        <PieChart cellData={myState.cellParams} />
+        <PieChart results={myState.results} />
         <BarChart />
       </div>
     </div>

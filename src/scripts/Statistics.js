@@ -9,14 +9,16 @@ function Statistics(props) {
 
       <div id="statistics-container">
         <span className="stat-item">
-          <span className="stat-number">{props.results.cellEnergy}</span>
+          <span className="stat-number">
+            {props.results.statistics.cellEnergy}
+          </span>
           <span className="stat-unit">Wh</span>
           <br />
           <span className="stat-caption">Energy per cell</span>
         </span>
         <span className="stat-item">
           <span className="stat-number">
-            ${props.results.totalCellLevelCost}
+            ${props.results.statistics.totalCellLevelCost}
           </span>
           <span className="stat-unit">per kWh</span>
           <br />
@@ -24,7 +26,7 @@ function Statistics(props) {
         </span>
         <span className="stat-item">
           <span className="stat-number">
-            ${props.results.totalPackLevelCost}
+            ${props.results.statistics.totalPackLevelCost}
           </span>
           <span className="stat-unit">per kWh</span>
           <br />
