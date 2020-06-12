@@ -1,6 +1,6 @@
 const priceParameters = [
   {
-    name: "catActiveP",
+    name: "catActive",
     label: "Cathode Active Material",
     unit: "$/kg",
     value: 50,
@@ -10,7 +10,7 @@ const priceParameters = [
     enabled: true,
   },
   {
-    name: "anActiveP",
+    name: "anActive",
     label: "Anode Active Material",
     unit: "$/kg",
     value: 20,
