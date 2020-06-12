@@ -29,6 +29,7 @@ function App() {
   useEffect(() => {
     let results = calculateResults(myState.cellParams, myState.priceParams);
     setMyState({ ...myState, results: results });
+    // eslint-disable-next-line
   }, [myState.cellParams, myState.priceParams]);
 
   return (
