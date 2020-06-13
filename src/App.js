@@ -51,6 +51,16 @@ function App() {
         <Statistics results={myState.results} />
         <PieChart results={myState.results} />
         <BarChart />
+
+        <div>
+          <p className="credit">Created by Ethan Woodbury</p>
+          <a
+            className="github"
+            href="https://github.com/ewoodbury/battery-cost-app"
+          >
+            Github
+          </a>
+        </div>
       </div>
     </div>
   );

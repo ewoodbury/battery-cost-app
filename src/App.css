@@ -447,3 +447,11 @@ input::-webkit-inner-spin-button {
 .slider-value-disabled {
   color: #a9a9a9;
 }
+
+.credit {
+  padding: 5px 0;
+  margin: 0;
+}
+.github {
+  padding: 0 0 10px 0;
+}
