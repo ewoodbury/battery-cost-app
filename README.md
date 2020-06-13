@@ -1,68 +1,21 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## BatteryCost.me
+A web app for modeling the cost of lithium ion batteries.
+Live demo at https://www.batterycost.me
 
-## Available Scripts
+### How to Use
+This is a simple calculator that aggregates all components of the cost of a lithium ion batteries. Simply move the sliders to change the input parameters and see the cost breakdown change in real time. 
 
-In the project directory, you can run:
+The Cell sections allows users to specify major parameters in the cell design, and the Price section allows users to specify the prices of materials used in the cell as well as the cell manufacturing and pack costs.
 
-### `npm start`
+The Statistics section shows the energy per cell (in Wh), the cell-level cost ($/kWh), and the pack-level cost ($/kWh). The pack-level cost is simply the cell-level cost with the pack integration costs added. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The Cost Breakdown section shows the breakdown of the pack cost by component. Users can interact with the graph by hovering over the slices to see the individual costs and by clicking on legend items to exclude that component from the graph.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The Compare section currently shows dummy data, but will show a stacked bar chart comparison between the user's current cell and several standard cells such as NMC111, NCA811, LFP, and NCA.
 
-### `npm test`
+### Tech
+This app was written in React.js, with framework provided by create-react-app. All styling was done using vanilla CSS (no frameworks). Fonts  by Google Fonts, graphs by Chart.js.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Disclaimers
+- The default cell and price inputs do not reflect real-world data, but instead show general cost estimates based on publicly available information. The default cost results do not reflect actual commercial battery costs.
+- Users should not use this tool as a reflection of real-world costs, but instead as a tool to demonstrate how battery costs change as cell parameters or prices change. For instance, this app would be appropriate for estimating the cost reduction associated with a 10% improvement in the specific capacity of the cathode.
