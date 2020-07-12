@@ -138,7 +138,7 @@ h3 {
 }
 
 /*Tablet width section*/
-@media (min-width: 650px) {
+@media (min-width: 700px) {
   .content {
     display: grid;
     grid-template-columns: 2fr 3fr;
@@ -209,7 +209,7 @@ h3 {
 }
 
 /*Max-width section*/
-@media (min-width: 1400px) {
+@media (min-width: 1500px) {
   .content {
     display: grid;
     grid-template-columns: 2fr 2fr 3fr 4fr;
@@ -473,6 +473,6 @@ input::-webkit-inner-spin-button {
 .credit {
   margin: 0;
 }
-.github {
-  padding: 0 0 10px 0;
+.icon {
+  padding: 4px 0px;
 }
