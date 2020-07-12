@@ -52,7 +52,7 @@ function App() {
         <PieChart results={myState.results} />
         <BarChart />
 
-        <div>
+        <div id="credit-section">
           <p className="credit">Created by Ethan Woodbury</p>
           <a
             className="github"
@@ -61,15 +61,6 @@ function App() {
           >
             Github
           </a>
-          {/* <a target="_blank" href="https://www.linkedin.com/in/ethan-woodbury/">
-            <img src="linkedin.jpg"></img>
-          </a>
-          <a target="_blank" href="https://twitter.com/EthanMWoodbury/">
-            <i class="fab fa-twitter fa-2x"></i>
-          </a>
-          <a target="_blank" href="https://github.com/ewoodbury">
-            <i class="fab fa-github fa-2x black"></i>
-          </a> */}
         </div>
       </div>
     </div>

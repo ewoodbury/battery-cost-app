@@ -132,6 +132,10 @@ h3 {
   grid-column: 1;
   grid-row: 3;
 }
+#credit-section {
+  grid-row: 6;
+  grid-column: 1;
+}
 
 /*Tablet width section*/
 @media (min-width: 650px) {
@@ -161,6 +165,10 @@ h3 {
   #bar-section {
     grid-column: 2 / 4;
     grid-row: 3 / 6;
+  }
+  #credit-section {
+    grid-row: 5;
+    grid-column: 1;
   }
 }
 
@@ -194,6 +202,10 @@ h3 {
     grid-column: 3;
     grid-row: 2 / 5;
   }
+  #credit-section {
+    grid-row: 4;
+    grid-column: 1;
+  }
 }
 
 /*Max-width section*/
@@ -225,6 +237,10 @@ h3 {
   #bar-section {
     grid-column: 4;
     grid-row: 2 / 3;
+  }
+  #credit-section {
+    grid-row: 4;
+    grid-column: 1;
   }
 }
 /*End CSS Grid Section
@@ -448,8 +464,13 @@ input::-webkit-inner-spin-button {
   color: #a9a9a9;
 }
 
+/* End Slider Section */
+
+#credit-section {
+  padding: 0px 7px;
+}
+
 .credit {
-  padding: 5px 0;
   margin: 0;
 }
 .github {
