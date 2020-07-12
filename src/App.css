@@ -327,6 +327,7 @@ h3 {
 #pie-section,
 #bar-section {
   height: calc(80vh - 50px);
+  min-height: 400px;
 }
 
 @media (max-width: 1024px) {
