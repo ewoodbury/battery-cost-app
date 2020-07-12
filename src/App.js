@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import Header from "./scripts/Header.js";
 import CellInput from "./scripts/CellInput.js";
 import PriceInput from "./scripts/PriceInput.js";
 import Statistics from "./scripts/Statistics.js";
@@ -35,14 +36,7 @@ function App() {
 
   return (
     <div>
-      <div id="header">
-        <div id="title">
-          <h1>BatteryCost.me</h1>
-        </div>
-        <div id="intro">
-          <p>An app for modeling the cost of lithium-ion batteries</p>
-        </div>
-      </div>
+      <Header />
       <div className="content">
         <CellInput cellData={myState.cellParams} getCellData={getCellData} />
         <PriceInput
