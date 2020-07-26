@@ -45,8 +45,8 @@ function App() {
         />
         <Statistics results={myState.results} />
         <PieChart results={myState.results} />
-        <BarChart />
-        <Footer />
+        <BarChart results={myState.results} />
+        {/* <Footer /> */}
       </div>
     </div>
   );

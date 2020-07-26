@@ -1,0 +1,3 @@
+const cellPresets = {
+    nmc811:
+}
