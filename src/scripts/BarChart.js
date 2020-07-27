@@ -27,18 +27,27 @@ function BarChart(props) {
   // console.log(Object.values(props.results.cost)[0]);
   let datasets = [];
   for (let i = 0; i < Object.keys(props.results.cost).length; i++) {
+    // This is a loop through the cost components!
     datasets.push({
       label: [Object.keys(props.results.cost)[i]],
-      data: [Object.values(props.results.cost)[i], 15],
+      data: [
+        Object.values(props.results.cost)[i],
+        Object.values(props.resultsPresets[0].cost)[i],
+        Object.values(props.resultsPresets[1].cost)[i],
+        Object.values(props.resultsPresets[2].cost)[i],
+      ],
       backgroundColor: backgroundColors[i],
     });
   }
   const data = {
     datasets: datasets,
-    labels: ["Bob", "NMC 811"],
+    labels: [
+      "Model",
+      props.cellPresets[0].label,
+      props.cellPresets[1].label,
+      props.cellPresets[2].label,
+    ],
   };
-  // console.log(data.labels);
-  // console.log(data.datasets[0]);
   return (
     <div id="bar-section" className="container">
       <h3 className="card-header">Compare</h3>
