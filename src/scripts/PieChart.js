@@ -2,7 +2,11 @@ import React from "react";
 import { Pie } from "react-chartjs-2";
 
 function PieChart(props) {
-  const data1 = {
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+  };
+  const data = {
     labels: Object.keys(props.results.cost),
     datasets: [
       {
@@ -30,13 +34,7 @@ function PieChart(props) {
     <div id="pie-section" className="container">
       <h3 className="card-header">Cost Breakdown</h3>
       <div id="pie-chart">
-        <Pie
-          data={data1}
-          options={{
-            responsive: true,
-            maintainAspectRatio: false,
-          }}
-        />
+        <Pie data={data} options={options} />
       </div>
     </div>
   );

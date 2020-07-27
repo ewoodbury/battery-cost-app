@@ -9,6 +9,8 @@ import BarChart from "./scripts/BarChart.js";
 import Footer from "./scripts/Footer.js";
 import cellParameters from "./data/cellParameters.js";
 import priceParameters from "./data/priceParameters.js";
+import cellPresets from "./data/cellPresets.js";
+import pricePresets from "./data/pricePresets.js";
 import calculateResults from "./scripts/calculateResults.js";
 
 function App() {
@@ -34,6 +36,15 @@ function App() {
     // eslint-disable-next-line
   }, [myState.cellParams, myState.priceParams]);
 
+  let resultsList = [];
+  for (let i = 0; i < 3; i++) {
+    let thisResults = calculateResults(
+      cellPresets[i].params,
+      pricePresets[i].params
+    );
+    resultsList.push(thisResults);
+  }
+
   return (
     <div>
       <Header />
@@ -45,7 +56,11 @@ function App() {
         />
         <Statistics results={myState.results} />
         <PieChart results={myState.results} />
-        <BarChart />
+        <BarChart
+          results={myState.results}
+          resultsPresets={resultsList}
+          cellPresets={cellPresets}
+        />
         <Footer />
       </div>
     </div>
