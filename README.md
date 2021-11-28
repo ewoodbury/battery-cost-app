@@ -4,6 +4,8 @@ A web app for modeling the cost of lithium ion batteries
 
 https://www.batterycost.me
 
+![Website screenshot](screenshot.png)
+
 ### Usage
 This web app implements a simple bottom-up model of the cost of lithium ion batteries. Move the sliders to change the input parameters and see the cost breakdown change in real time. 
 
